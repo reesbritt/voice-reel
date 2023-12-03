@@ -16,9 +16,9 @@ export default function Home() {
           voice.
         </p>
         <p className="text-base text-white">
-          If you're looking for something specific from you reel though, don't
-          hesitate to get in touch. Well always tailor our services so it works
-          for you.
+          {
+            "If you're looking for something specific from you reel though, don't hesitate to get in touch. Well always tailor our services so it works for you."
+          }
         </p>
       </div>
     </div>

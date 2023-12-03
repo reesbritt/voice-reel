@@ -25,12 +25,14 @@ const CardComponentRob = () => {
             and many more superb, highly experienced actors.
           </p>
           <p>
-            He trained and worked as an actor so knows what it's like being on
-            the other side of the microphone.
+            {
+              "He trained and worked as an actor so knows what it's like being on the other side of the microphone."
+            }
           </p>
           <p>
-            He works in a collborative, relaxed atmosphere, as he thinks that's
-            when the best stuff happens.
+            {
+              "He works in a collborative, relaxed atmosphere, as he thinks that's when the best stuff happens."
+            }
           </p>
           <p>
             He started Voice Reel London because he wants to help voice actors
@@ -65,9 +67,9 @@ const CardComponentLaurence = () => {
             audiobooks, video games and cartoons.
           </p>
           <p>
-            {" "}
-            Laurence's passion lies in making soundscapes, layering music and
-            sound effects to create rich and fully realised worlds.
+            {
+              "Laurence's passion lies in making soundscapes, layering music and sound effects to create rich and fully realised worlds."
+            }
           </p>
           <p>
             Laurence is responsible for making sure the reels are mixed and
@@ -98,10 +100,9 @@ const CardComponentPip = () => {
 
         <div className="flex-col flex justify-center space-y-4">
           <p className="pt-4">
-            Pip is a writed, theatremaker and dramaturg. He holds an MA in
-            dramaturgy and writing for performance from Goldsmiths, and he has
-            had work performed at Camden People's Theatre, Southwark Playhouse,
-            Cambrdige, Junction and the Vaults festival.
+            {
+              "Pip is a writed, theatremaker and dramaturg. He holds an MA in dramaturgy and writing for performance from Goldsmiths, and he has had work performed at Camden People's Theatre, Southwark Playhouse, Cambrdige, Junction and the Vaults festival."
+            }
           </p>
           <p>
             He is the co-artistic director of critically acclaimed theatre
@@ -109,9 +110,9 @@ const CardComponentPip = () => {
             published by Nick Hern Books.
           </p>
           <p>
-            At Voice Reel London we have a large and ever-expanding bank of
-            scripts to choose from. It's Pip's personal mission to find the
-            right ones for you.
+            {
+              "At Voice Reel London we have a large and ever-expanding bank of scripts to choose from. It's Pip's personal mission to find the right ones for you."
+            }
           </p>
         </div>
       </CardContent>
