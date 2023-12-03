@@ -5,7 +5,7 @@ export const NavHeader: React.FC = () => {
   return (
     <header className="bg-gray-800 text-white py-4 px-6 w-full">
       <nav>
-        <ul className="list-none m-0 p-0 flex">
+        <ul className="list-none m-0 p-0 flex ">
           <li className="mr-4">
             <Link href="/home">
               <p className="text-white no-underline font-bold">Home</p>

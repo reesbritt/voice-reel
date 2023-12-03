@@ -34,7 +34,7 @@ export const SplitSectionSelector = () => {
           src="/microphone.jpeg"
           alt="The process"
           layout="fill"
-          objectFit="cover"
+          className="object-cover"
         />
       </div>
       <div className="bg-black w-8 flex items-center" id="bar">

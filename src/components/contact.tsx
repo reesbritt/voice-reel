@@ -37,7 +37,7 @@ export const ContactSection = () => {
             fill
             src="/contact.jpeg"
             alt="voice reel london"
-            objectFit="cover"
+            className="object-cover"
           />
         </div>
       </div>

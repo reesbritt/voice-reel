@@ -13,7 +13,7 @@ const CardComponentRob = () => {
           {" "}
           <Image
             fill
-            objectFit="cover"
+            className="object-cover"
             src="/robCairns.jpeg"
             alt="Pip Williams - Script Supervisor"
           />
@@ -55,7 +55,7 @@ const CardComponentLaurence = () => {
           {" "}
           <Image
             fill
-            objectFit="cover"
+            className="object-cover"
             src="/robCairns.jpeg"
             alt="Pip Williams - Script Supervisor"
           />
@@ -92,7 +92,7 @@ const CardComponentPip = () => {
           {" "}
           <Image
             fill
-            objectFit="cover"
+            className="object-cover"
             src="/pipWilliams.JPG"
             alt="Pip Williams - Script Supervisor"
           />

@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { PropsWithChildren } from "react";
 import { NavHeader } from "../navigation";
-import { NewSplashScreen } from "@/components/splash-section copy";
+import { NewSplashScreen } from "@/components/splash-section-new";
 
 export default function HomeLayout({ children }: PropsWithChildren) {
   return (
