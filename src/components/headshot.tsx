@@ -14,7 +14,7 @@ const sizeVariantMap: Record<"small" | "medium" | "large" | "xLarge", number> =
   {
     small: 62,
     medium: 124,
-    large: 160,
+    large: 140,
     xLarge: 400,
   };
 

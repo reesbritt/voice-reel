@@ -9,16 +9,16 @@ export const NewSplashScreen: React.FC = () => {
     <div className="flex flex-1 bg-white overflow-hidden relative">
       <div className="w-full h-full bg-sky-200 opacity-20 z-10 absolute" />
       <Image src="/splash.jpeg" alt="Splash" fill className="object-cover" />
-      <div className=" w-2/5 flex flex-col ml-10 px-10 z-10 space-y-4 h-full">
-        <h1 className="text-5xl font-bold mb-4 pt-20 pb-2 text-white">
+      <div className=" w-2/5 flex flex-col ml-10 px-10 z-10 justify-evenly h-full">
+        <h1 className="text-5xl font-bold mb-4 pb-2 text-white">
           Find Your Voice
         </h1>
-        <p className="text-base text-white">
+        <p className="text-sm text-white">
           Based at ID Audio Studios in North-West London, we produce bespoke,
           professional-quality voice reels, tailored to the demands of our
           client.
         </p>
-        <p className="text-base text-white">{textString}</p>
+        <p className="text-sm text-white">{textString}</p>
         <div className="flex flex-col items-center justify-evenly h-1/2">
           <div className="flex -space-x-8">
             <Headshot
