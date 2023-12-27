@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const NavHeader: React.FC = () => {
   return (
-    <header className="bg-gray-800 text-white py-4 px-6 w-full">
+    <header className="bg-gray-800 text-white py-4 px-6 w-full hidden md:block">
       <nav>
         <ul className="list-none m-0 p-0 flex ">
           <li className="mr-4">
@@ -17,7 +17,7 @@ export const NavHeader: React.FC = () => {
             </Link>
           </li>
           <li className="mr-4">
-            <Link href="">
+            <Link href="/process">
               <p className="text-white no-underline font-bold">Process</p>
             </Link>
           </li>

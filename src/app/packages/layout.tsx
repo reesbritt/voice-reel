@@ -13,7 +13,7 @@ export default function HomeLayout({ children }: PropsWithChildren) {
         <NavHeader />
         {children}
       </div>
-      <Packages />
+      {/* <Packages /> */}
     </>
   );
 }

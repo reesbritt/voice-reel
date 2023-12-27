@@ -26,22 +26,22 @@ export const HomepageNavigation = () => {
     <div className="w-full flex h-[33vw]">
       <SquareDivPrimary>
         <div className="w-full h-full justify-center items-center flex flex-col ">
-          <AudioWaveform height={64} width={64} />
-          <p className="w-full text-center text-3xl pt-4">Our Process</p>
+          <AudioWaveform height={48} width={48} />
+          <p className="w-full text-center md:text-3xl pt-4">Our Process</p>
         </div>
       </SquareDivPrimary>
       <SquareDivAccent>
         <Link href="/packages">
           <div className="w-full h-full justify-center items-center flex flex-col ">
-            <BookAudio height={64} width={64} />
-            <p className="w-full text-center text-3xl pt-4">Our Packages</p>
+            <BookAudio height={48} width={48} />
+            <p className="w-full text-center md:text-3xl pt-4">Our Packages</p>
           </div>
         </Link>
       </SquareDivAccent>
       <SquareDivPrimary>
         <div className="w-full h-full justify-center items-center flex flex-col ">
-          <Speech height={64} width={64} />
-          <p className="w-full text-center text-3xl pt-4">Our Reels</p>
+          <Speech height={48} width={48} />
+          <p className="w-full text-center md:text-3xl pt-4">Our Reels</p>
         </div>
       </SquareDivPrimary>
     </div>

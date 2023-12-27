@@ -12,9 +12,9 @@ const PackageCard = ({
   price: string;
 } & PropsWithChildren) => {
   return (
-    <Card className="p-4 flex flex-col items-center bg-gray-800 text-white flex-1 shadow-lg shadow-gray-800 border border-gray-800">
+    <Card className="py-4 my-2 md:my-0 flex flex-col items-center bg-gray-800 text-white flex-1 shadow-lg shadow-gray-800 border border-gray-800">
       <CardTitle>{name}</CardTitle>
-      <CardContent className="flex flex-col items-center py-4 justify-between flex-1">
+      <CardContent className="flex flex-col items-center pt-2 justify-between flex-1">
         <div className="flex flex-col items-left text-left">{children}</div>
         <p className="text-xl font-semibold pt-4">{price}</p>
       </CardContent>
@@ -39,16 +39,16 @@ export const Packages = () => {
   ];
   return (
     <>
-      <div className="w-full h-1/2-screen flex space-x-20 px-20 py-8 justify-evenly">
+      <div className="flex-1 flex md:space-x-4 py-4 justify-evenly text-sm flex-col md:flex-row">
         <PackageCard {...options[0]}>
           <div className="flex flex-col items-center w-full ">
-            <Speech width={120} height={120} className="text-accent pb-4" />
+            <Speech width={80} height={80} className="text-accent pb-4" />
           </div>
           <p>- 4 Audiobook Tracks</p>
         </PackageCard>
         <PackageCard {...options[1]}>
           <div className="flex flex-col items-center w-full ">
-            <FileVolume width={120} height={120} className="text-accent pb-4" />
+            <FileVolume width={80} height={80} className="text-accent pb-4" />
           </div>
           <p>- 5 Commercial Tracks</p>
           <p>- 1 Documentary Track</p>
@@ -56,7 +56,7 @@ export const Packages = () => {
         </PackageCard>{" "}
         <PackageCard {...options[2]}>
           <div className="flex flex-col items-center w-full ">
-            <AudioLines width={120} height={120} className="text-accent pb-4" />
+            <AudioLines width={80} height={80} className="text-accent pb-4" />
           </div>
           <p>- 3 Animation/Video Game Tracks</p>
           <p>- 5 Commercial Tracks</p>
@@ -65,7 +65,7 @@ export const Packages = () => {
           <p>- 4 Audiobook Tracks</p>
         </PackageCard>
       </div>
-      <div className="w-full flex justify-center pb-8">
+      {/* <div className="w-full flex justify-center pb-8">
         <Button
           variant="secondary"
           size="lg"
@@ -73,7 +73,7 @@ export const Packages = () => {
         >
           Get In Touch
         </Button>
-      </div>
+      </div> */}
     </>
   );
 };

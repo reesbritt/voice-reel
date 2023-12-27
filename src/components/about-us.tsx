@@ -1,133 +1,84 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Headshot } from "./headshot";
+import { Button } from "./ui/button";
+import { FC } from "react";
+import Link from "next/link";
 
-const CardComponentRob = () => {
+type CardComponentProps = {
+  firstName: string;
+  title: string;
+  imageSrc: string;
+};
+const CardComponent: FC<CardComponentProps> = ({
+  firstName,
+  title,
+  imageSrc,
+}) => {
   return (
-    <Card className="flex flex-col flex-1 text-center z-10 border-gray-800">
-      <CardHeader className="text-xl font-black">
-        Rob Cairns -<br /> Director
-      </CardHeader>
-      <CardContent className="space-y-4 text-xs flex flex-1 flex-col justify-center items-center">
-        <div className="w-3/4 h-[350px] relative">
-          {" "}
-          <Image
-            fill
-            className="object-cover"
-            src="/robCairns.jpeg"
-            alt="Pip Williams - Script Supervisor"
-          />
-        </div>
-        <div className="flex-col flex justify-center space-y-4">
-          <p className="pt-4">
-            Rob works as a producer on audiobooks, video games and podcasts. He
-            has worked with the likes of Maxine Peake, Ben Miles, Daniel Rigby
-            and many more superb, highly experienced actors.
-          </p>
-          <p>
-            {
-              "He trained and worked as an actor so knows what it's like being on the other side of the microphone."
-            }
-          </p>
-          <p>
-            {
-              "He works in a collborative, relaxed atmosphere, as he thinks that's when the best stuff happens."
-            }
-          </p>
-          <p>
-            He started Voice Reel London because he wants to help voice actors
-            progress in the industry without paying prohibitive prices.
-          </p>
-        </div>
+    <Card className="flex flex-col flex-1 text-center z-10 border-gray-800 ">
+      <CardHeader className=" font-black text-center">{title}</CardHeader>
+      <CardContent className="text-xs flex flex-1 items-center justify-evenly flex-wrap">
+        <Headshot sizeVariant="medium" imageSrc={imageSrc} />
+        <Button variant="outline">About {firstName}</Button>
       </CardContent>
     </Card>
   );
 };
 
-const CardComponentLaurence = () => {
-  return (
-    <Card className="flex flex-col flex-1 text-center z-10 border-gray-800">
-      <CardHeader className="text-xl font-black">
-        Laurence Pearson -<br /> Post Production
-      </CardHeader>
-      <CardContent className="space-y-4 text-xs flex-1 flex flex-col justify-center items-center">
-        <div className="w-3/4 h-[350px] relative">
-          {" "}
-          <Image
-            fill
-            className="object-cover"
-            src="/robCairns.jpeg"
-            alt="Pip Williams - Script Supervisor"
-          />
-        </div>
-        <div className="flex-col flex justify-center space-y-4">
-          <p className="pt-4">
-            Laurence studied film at the University of Falmouth, specialising in
-            Sound Design. He has worked extensively as an engineer on
-            audiobooks, video games and cartoons.
-          </p>
-          <p>
-            {
-              "Laurence's passion lies in making soundscapes, layering music and sound effects to create rich and fully realised worlds."
-            }
-          </p>
-          <p>
-            Laurence is responsible for making sure the reels are mixed and
-            mastered to industy standard.
-          </p>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
-
-const CardComponentPip = () => {
-  return (
-    <Card className="flex flex-col flex-1 text-center z-10 border-gray-800">
-      <CardHeader className="text-xl font-black">
-        Pip Williams -<br /> Script Supervisor
-      </CardHeader>
-      <CardContent className="space-y-4 text-xs flex flex-1 flex-col justify-center items-center">
-        <div className="w-3/4 h-[350px] relative">
-          {" "}
-          <Image
-            fill
-            className="object-cover"
-            src="/pipWilliams.JPG"
-            alt="Pip Williams - Script Supervisor"
-          />
-        </div>
-
-        <div className="flex-col flex justify-center space-y-4">
-          <p className="pt-4">
-            {
-              "Pip is a writed, theatremaker and dramaturg. He holds an MA in dramaturgy and writing for performance from Goldsmiths, and he has had work performed at Camden People's Theatre, Southwark Playhouse, Cambrdige, Junction and the Vaults festival."
-            }
-          </p>
-          <p>
-            He is the co-artistic director of critically acclaimed theatre
-            company We Talk Of Horses, and his monologue One More Son is
-            published by Nick Hern Books.
-          </p>
-          <p>
-            {
-              "At Voice Reel London we have a large and ever-expanding bank of scripts to choose from. It's Pip's personal mission to find the right ones for you."
-            }
-          </p>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
 export const AboutUs = () => {
+  const textString =
+    "Whether this be your first voice reel, or you've worked in the industry for many years and are looking to refresh, our goal is to showcase the uniqueness of your voice, helping you stand out and booke voice work in a crowded market.";
+
   return (
-    <div className="w-full flex flex-col items-center py-10 px-10 " id="#about">
-      <h1 className="font-bold text-4xl mb-8">About Us</h1>
-      <div className="flex space-x-16 px-4 relative">
-        <CardComponentRob />
-        <CardComponentLaurence />
-        <CardComponentPip />
+    <>
+      <div
+        className="w-full flex flex-col items-center md:py-10 md:px-10 py-4 px-4 text-center"
+        id="#about"
+      >
+        <h1 className="font-light text-5xl md:text-6xl mb-8">Meet the team</h1>
+        <div className="max-w-[1200px] relative w-full h-96">
+          <Image
+            src="/about.jpeg"
+            className="object-cover z-1"
+            alt="about-image"
+            fill
+          />
+        </div>
+        <div className="flex flex-1 flex-col max-w-[1200px] relative w-full h-96">
+          <div className="w-full flex-1 relative">
+            <div className=" w-full h-full flex flex-col py-8 z-20 text-sm font-semibold">
+              <p className="flex-1 pb-4">
+                Based at{" "}
+                <Link className="underline" href="https://idaudio.co.uk">
+                  ID Audio Studios
+                </Link>{" "}
+                in North-West London, we produce bespoke, professional-quality
+                voice reels, tailored to the demands of our client.
+              </p>
+              <p className="flex-1">{textString}</p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 w-full">
+            <CardComponent
+              title="Rob Cairns - Director"
+              imageSrc="/robCairns.jpeg"
+              firstName="Rob"
+            />
+            <CardComponent
+              title="Laurence Pearson - Post Production"
+              firstName="Laurence"
+              imageSrc="/laurencePearson.jpeg"
+            />
+
+            <CardComponent
+              title="Pip Williams - Script Supervisor"
+              firstName="Pip"
+              imageSrc="/pipWilliams.JPG"
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
