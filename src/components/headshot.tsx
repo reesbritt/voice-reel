@@ -8,6 +8,7 @@ interface CircularImageProps {
   imageSrc: string;
   sizeVariant: "small" | "medium" | "large";
   classNames?: string;
+  id?: string;
 }
 
 const sizeVariantMap: Record<"small" | "medium" | "large" | "xLarge", number> =
@@ -22,6 +23,7 @@ export const Headshot: FC<CircularImageProps> = ({
   imageSrc,
   sizeVariant,
   classNames: overrideClasses,
+  id,
 }) => {
   const classes = classNames(`rounded-full overflow-hidden`, overrideClasses);
   const width = sizeVariantMap[sizeVariant] || sizeVariantMap.medium;
@@ -33,6 +35,7 @@ export const Headshot: FC<CircularImageProps> = ({
         width,
         height,
       }}
+      id={id}
     >
       <Image
         src={imageSrc}

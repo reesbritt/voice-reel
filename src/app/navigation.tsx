@@ -26,6 +26,11 @@ export const NavHeader: React.FC = () => {
               <p className="text-white no-underline font-bold">Packages</p>
             </Link>
           </li>
+          <li className="mr-4">
+            <Link href="/gallery">
+              <p className="text-white no-underline font-bold">Gallery</p>
+            </Link>
+          </li>
           <li>
             <Link href="/home#contact">
               <p className="text-white no-underline font-bold">Contact</p>
