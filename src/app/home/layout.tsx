@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { PropsWithChildren } from "react";
 import { NavHeader } from "../navigation";
-import { NewSplashScreen } from "@/components/splash-section-new";
+import { SplashScreen } from "@/components/splash-section";
 
 export default function HomeLayout({ children }: PropsWithChildren) {
   return (
@@ -11,7 +11,7 @@ export default function HomeLayout({ children }: PropsWithChildren) {
           <Header />
         </div>
         <NavHeader />
-        <NewSplashScreen />
+        <SplashScreen />
       </div>
       {children}
     </>
